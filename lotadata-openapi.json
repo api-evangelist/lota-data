@@ -1,0 +1,1013 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "2.0.0",
+        "title": "LotaData",
+        "description": "Access the most exhaustive, accurate and up-to-date collection of global and hyper-local geocoded events and activities across a wide range of categories and genres",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/api2.lotadata.com\/v2"
+    ],
+    "paths": {
+        "\/events": {
+            "get": {
+                "summary": "Find event occurrences in the area. Returns results at specific place and time, event groups are expanded for every occurrence.",
+                "description": "",
+                "operationId": "EventsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "category",
+                        "in": "query",
+                        "description": "List of required EventCategory ids (Tier 1)"
+                    },
+                    {
+                        "name": "activity",
+                        "in": "query",
+                        "description": "List of required activity type ids (compliment to category)"
+                    },
+                    {
+                        "name": "ambience",
+                        "in": "query",
+                        "description": "List of required ambience ids"
+                    },
+                    {
+                        "name": "genre",
+                        "in": "query",
+                        "description": "List of required genre ids"
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "Matching on event and place names"
+                    },
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "Text query matching titles, description, various text, tags, category"
+                    },
+                    {
+                        "name": "from_day",
+                        "in": "query",
+                        "description": "Start on or after date specified (2015-10-16)"
+                    },
+                    {
+                        "name": "to_day",
+                        "in": "query",
+                        "description": "Start on or before date specified (2015-10-16)"
+                    },
+                    {
+                        "name": "capacity_min",
+                        "in": "query",
+                        "description": "Min capacity at location"
+                    },
+                    {
+                        "name": "capacity_max",
+                        "in": "query",
+                        "description": "Min capacity at location"
+                    },
+                    {
+                        "name": "center",
+                        "in": "query",
+                        "description": "latitude,longitude of the origin point"
+                    },
+                    {
+                        "name": "radius",
+                        "in": "query",
+                        "description": "Distance from origin in meters"
+                    },
+                    {
+                        "name": "bbox",
+                        "in": "query",
+                        "description": "Corner of a bounding box (lat,lng). Requires 0 or 2 pairs"
+                    },
+                    {
+                        "name": "polygon",
+                        "in": "query",
+                        "description": "Closed custom polygon. Ordered list of lat,lng pairs"
+                    },
+                    {
+                        "name": "within",
+                        "in": "query",
+                        "description": "Search within specified geopolitical place id"
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Return results starting at specified offset"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "Max results to return"
+                    },
+                    {
+                        "name": "fieldset",
+                        "in": "query",
+                        "description": "Return results starting at specified offset (summary, context, detail)"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "List of matching events",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/EventsSearchResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/events\/{id}": {
+            "get": {
+                "summary": "Get Specific event details.",
+                "description": "",
+                "operationId": "EventsIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "event @id"
+                    },
+                    {
+                        "name": "fieldset",
+                        "in": "query",
+                        "description": "Return results starting at specified offset (summary, context, detail)"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "List of matching events",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/EventsSearchResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/places": {
+            "get": {
+                "summary": "Venues, landmarks, regions, these are all places to search.",
+                "description": "",
+                "operationId": "PlacesGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "category",
+                        "in": "query",
+                        "description": "List of required EventCategory ids (Tier 1)"
+                    },
+                    {
+                        "name": "function",
+                        "in": "query",
+                        "description": "List of required PlaceFunction ids (Tier 2)"
+                    },
+                    {
+                        "name": "ambience",
+                        "in": "query",
+                        "description": "List of required ambience ids"
+                    },
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "List of required tags"
+                    },
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "description": "Specific PlaceType to return"
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "Matching on event and place names"
+                    },
+                    {
+                        "name": "exact",
+                        "in": "query",
+                        "description": "Require an exact name match"
+                    },
+                    {
+                        "name": "capacity_min",
+                        "in": "query",
+                        "description": "Min capacity at location"
+                    },
+                    {
+                        "name": "capacity_max",
+                        "in": "query",
+                        "description": "Min capacity at location"
+                    },
+                    {
+                        "name": "street",
+                        "in": "query",
+                        "description": "Address of the place or street component of the address"
+                    },
+                    {
+                        "name": "locality",
+                        "in": "query",
+                        "description": "city, town, or neighborhood of the place"
+                    },
+                    {
+                        "name": "region",
+                        "in": "query",
+                        "description": "region or state"
+                    },
+                    {
+                        "name": "postal_code",
+                        "in": "query",
+                        "description": "Postal or zip code"
+                    },
+                    {
+                        "name": "country",
+                        "in": "query",
+                        "description": "country component of the address"
+                    },
+                    {
+                        "name": "center",
+                        "in": "query",
+                        "description": "latitude,longitude of the origin point"
+                    },
+                    {
+                        "name": "radius",
+                        "in": "query",
+                        "description": "Distance from origin in meters"
+                    },
+                    {
+                        "name": "bbox",
+                        "in": "query",
+                        "description": "Corner of a bounding box (lat,lng). Requires 0 or 2 pairs"
+                    },
+                    {
+                        "name": "polygon",
+                        "in": "query",
+                        "description": "Closed custom polygon. Ordered list of lat,lng pairs"
+                    },
+                    {
+                        "name": "within",
+                        "in": "query",
+                        "description": "Search within specified geopolitical place id"
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Return results starting at specified offset"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "Max results to return"
+                    },
+                    {
+                        "name": "fieldset",
+                        "in": "query",
+                        "description": "Return results starting at specified offset (summary, context, detail)"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "List of matching events",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/EventsSearchResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/places\/{id}": {
+            "get": {
+                "summary": "Get specific place details",
+                "description": "",
+                "operationId": "PlacesIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "event @id"
+                    },
+                    {
+                        "name": "fieldset",
+                        "in": "query",
+                        "description": "Return results starting at specified offset (summary, context, detail)"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "List of matching events",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/EventsSearchResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Address": {
+                "type": "object",
+                "properties": {
+                    "country": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "formatted": {
+                        "description": "Address formatted for display as a single string",
+                        "type": "string"
+                    },
+                    "locality": {
+                        "description": "City or town",
+                        "type": "string"
+                    },
+                    "postalCode": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "region": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "street": {
+                        "description": "Street portion of the address, may sometimes be a common name of the place",
+                        "type": "string"
+                    },
+                    "unit": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ContactDetail": {
+                "type": "object",
+                "properties": {
+                    "displayPhone": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "email": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "facebookUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "instagramName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "lastfmUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "soundcloudUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "spotifyUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "twitterName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "youtubeUrl": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Error": {
+                "type": "object",
+                "properties": {
+                    "cause": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "tracking": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "EventOccurenceDetail": {
+                "type": "object",
+                "properties": {
+                    "@id": {
+                        "description": "Unique event id",
+                        "type": "string"
+                    },
+                    "@type": {
+                        "description": "Type of occurrence. You will usually see Organized as the type for most events. While Virtual events will get their own Virtual type.",
+                        "type": "string"
+                    },
+                    "activity": {
+                        "description": "Associated ActivityType entries",
+                        "type": "array"
+                    },
+                    "ambience": {
+                        "description": "expected mood and feel of the event",
+                        "type": "array"
+                    },
+                    "at": {
+                        "description": "Reference to the location where event takes place",
+                        "type": ""
+                    },
+                    "awayTeam": {
+                        "description": "other SportsTeam playing",
+                        "type": ""
+                    },
+                    "category": {
+                        "description": "Associated EventCategory. May be multiple, such as Charity Music event",
+                        "type": "array"
+                    },
+                    "ContactDetail": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "contactPoint": {
+                        "description": "Social and contact references",
+                        "type": ""
+                    },
+                    "description": {
+                        "description": "Full description in plain text",
+                        "type": "string"
+                    },
+                    "doorTime": {
+                        "description": "Time when the admission starts",
+                        "type": "string"
+                    },
+                    "duration": {
+                        "description": "Duration of the event in ISO-8601 format (PT45M) - 45 minutes",
+                        "type": "string"
+                    },
+                    "endApprox": {
+                        "description": "endDate is approximated based on historical data",
+                        "type": "boolean"
+                    },
+                    "endDate": {
+                        "description": "Time when the event ends, if known",
+                        "type": "string"
+                    },
+                    "extTaxonomy": {
+                        "description": "extended taxonomy such as IAB and Google AdWords",
+                        "type": "array"
+                    },
+                    "genre": {
+                        "description": "applicable Genres. (Tier 2 taxonomy). May include related genres from categories, not deemed as primary",
+                        "type": "array"
+                    },
+                    "headline": {
+                        "description": "Optional short description in plain text",
+                        "type": "string"
+                    },
+                    "homeTeam": {
+                        "description": "SportsTeam playing at home field",
+                        "type": ""
+                    },
+                    "htmlDescription": {
+                        "description": "Full description with HTML formatting, where available",
+                        "type": "string"
+                    },
+                    "image": {
+                        "description": "Primary image",
+                        "type": ""
+                    },
+                    "inLanguage": {
+                        "description": "Primary language of the event",
+                        "type": ""
+                    },
+                    "name": {
+                        "description": "Name of the event in plain text",
+                        "type": "string"
+                    },
+                    "noTime": {
+                        "description": "Specific time of the event is unknown. (shown only when true)",
+                        "type": "boolean"
+                    },
+                    "offers": {
+                        "description": "Ticketing options",
+                        "type": "array"
+                    },
+                    "onDemand": {
+                        "description": "This event can start at any time during specified window",
+                        "type": "boolean"
+                    },
+                    "performer": {
+                        "description": "List of Personas significant for this event",
+                        "type": "array"
+                    },
+                    "photo": {
+                        "description": "Primary image",
+                        "type": "array"
+                    },
+                    "startDate": {
+                        "description": "Time when the event starts",
+                        "type": "string"
+                    },
+                    "superEvent": {
+                        "description": "Parent id, if this event is part of a series of a group",
+                        "type": ""
+                    },
+                    "updated": {
+                        "description": "Timestamp of last modification (UTC)",
+                        "type": "string"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "workPerformed": {
+                        "description": "Subject matter of the event",
+                        "type": "array"
+                    },
+                    "PlaceReference": {
+                        "description": "Unique Location",
+                        "type": "object"
+                    },
+                    "FeatureReference": {
+                        "description": "Identifier for a Feature",
+                        "type": "object"
+                    },
+                    "ImageMeta": {
+                        "description": "Image meta data",
+                        "type": "object"
+                    },
+                    "OccurrenceReference": {
+                        "description": "",
+                        "type": "object"
+                    }
+                }
+            },
+            "activity": {
+                "type": "array"
+            },
+            "ambience": {
+                "type": "array"
+            },
+            "at": {
+                "type": "object"
+            },
+            "awayTeam": {
+                "type": "object"
+            },
+            "category": {
+                "type": "array"
+            },
+            "extTaxonomy": {
+                "type": "array"
+            },
+            "genre": {
+                "type": "array"
+            },
+            "homeTeam": {
+                "type": "object"
+            },
+            "image": {
+                "type": "object"
+            },
+            "inLanguage": {
+                "type": "object"
+            },
+            "offers": {
+                "type": "array"
+            },
+            "performer": {
+                "type": "array"
+            },
+            "photo": {
+                "type": "array"
+            },
+            "superEvent": {
+                "type": "object"
+            },
+            "workPerformed": {
+                "type": "array"
+            },
+            "EventsQuery": {
+                "type": "object",
+                "properties": {
+                    "activity": {
+                        "description": "Associated ActivityType entries",
+                        "type": "array"
+                    },
+                    "category": {
+                        "description": "Associated EventCategory. May be multiple, such as Charity Music event",
+                        "type": "array"
+                    },
+                    "limit": {
+                        "description": "maximum number of matches to return",
+                        "type": "integer"
+                    }
+                }
+            },
+            "EventsSearchResponse": {
+                "type": "object",
+                "properties": {
+                    "events": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "EventsQuery": {
+                        "description": "Specific filters understood and executed for this query. If your parameter is not visible here, then consult the documentation for correct usage.",
+                        "type": "object"
+                    },
+                    "query": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "stats": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "SearchStatsMetaResult": {
+                        "description": "Shows invocation details about the query. Running query again, could produce different results",
+                        "type": "object"
+                    }
+                }
+            },
+            "events": {
+                "type": "array"
+            },
+            "stats": {
+                "type": "object"
+            },
+            "FeatureReference": {
+                "type": "object",
+                "properties": {
+                    "@id": {
+                        "description": "Unique event id",
+                        "type": "string"
+                    },
+                    "@type": {
+                        "description": "Type of occurrence. You will usually see Organized as the type for most events. While Virtual events will get their own Virtual type.",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "Name of the event in plain text",
+                        "type": "string"
+                    }
+                }
+            },
+            "GeoJsonObject": {
+                "type": "object"
+            },
+            "GeoPt": {
+                "type": "object",
+                "properties": {
+                    "lat": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "lon": {
+                        "description": "",
+                        "type": "number"
+                    }
+                }
+            },
+            "ImageMeta": {
+                "type": "object",
+                "properties": {
+                    "@id": {
+                        "description": "Unique event id",
+                        "type": "string"
+                    },
+                    "caption": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "height": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "width": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "OccurrenceReference": {
+                "type": "object",
+                "properties": {
+                    "@id": {
+                        "description": "Unique event id",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "Name of the event in plain text",
+                        "type": "string"
+                    },
+                    "startDate": {
+                        "description": "Time when the event starts",
+                        "type": "string"
+                    }
+                }
+            },
+            "PlaceDetail": {
+                "type": "object",
+                "properties": {
+                    "ambience": {
+                        "description": "expected mood and feel of the event",
+                        "type": "array"
+                    },
+                    "category": {
+                        "description": "Associated EventCategory. May be multiple, such as Charity Music event",
+                        "type": "array"
+                    },
+                    "ContactDetail": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "contact": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "function": {
+                        "description": "PlaceFunction. (Tier 2 taxonomy)",
+                        "type": "array"
+                    },
+                    "openingHours": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "photo": {
+                        "description": "Primary image",
+                        "type": "array"
+                    }
+                }
+            },
+            "function": {
+                "type": "array"
+            },
+            "openingHours": {
+                "type": "array"
+            },
+            "PlaceReference": {
+                "type": "object",
+                "properties": {
+                    "@id": {
+                        "description": "Unique event id",
+                        "type": "string"
+                    },
+                    "@type": {
+                        "description": "Type of occurrence. You will usually see Organized as the type for most events. While Virtual events will get their own Virtual type.",
+                        "type": "string"
+                    },
+                    "Address": {
+                        "description": "Physical world addresss",
+                        "type": "object"
+                    },
+                    "address": {
+                        "description": "Address of the physical place",
+                        "type": ""
+                    },
+                    "GeoPt": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "geo": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "GeoJsonObject": {
+                        "description": "Shape defined per GeoJSON spec",
+                        "type": "object"
+                    },
+                    "geometry": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "location": {
+                        "description": "applies to Virtual places",
+                        "type": ""
+                    },
+                    "ImageMeta": {
+                        "description": "Image meta data",
+                        "type": "object"
+                    },
+                    "logo": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "name": {
+                        "description": "Name of the event in plain text",
+                        "type": "string"
+                    },
+                    "tag": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "VirtualLocation": {
+                        "description": "Virtual Address",
+                        "type": "object"
+                    }
+                }
+            },
+            "location": {
+                "type": "object"
+            },
+            "tag": {
+                "type": "array"
+            },
+            "PlacesQuery": {
+                "type": "object",
+                "properties": {
+                    "Address": {
+                        "description": "Physical world addresss",
+                        "type": "object"
+                    },
+                    "address": {
+                        "description": "Address of the physical place",
+                        "type": ""
+                    },
+                    "category": {
+                        "description": "Associated EventCategory. May be multiple, such as Charity Music event",
+                        "type": "array"
+                    },
+                    "limit": {
+                        "description": "maximum number of matches to return",
+                        "type": "integer"
+                    }
+                }
+            },
+            "PlacesSearchResponse": {
+                "type": "object",
+                "properties": {
+                    "places": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "PlacesQuery": {
+                        "description": "Specific filters understood and executed for this query. If your parameter is not visible here, then consult the documentation for correct usage.",
+                        "type": "object"
+                    },
+                    "query": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "stats": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "SearchStatsMetaResult": {
+                        "description": "Shows invocation details about the query. Running query again, could produce different results",
+                        "type": "object"
+                    }
+                }
+            },
+            "places": {
+                "type": "array"
+            },
+            "SearchStatsMetaResult": {
+                "type": "object",
+                "properties": {
+                    "count": {
+                        "description": "Total matches for the query",
+                        "type": "integer"
+                    },
+                    "fieldset": {
+                        "description": "Specific fields returned by this query",
+                        "type": "string"
+                    },
+                    "runtime": {
+                        "description": "Server side run time in msec for this request",
+                        "type": "integer"
+                    }
+                }
+            },
+            "TicketOffer": {
+                "type": "object",
+                "properties": {
+                    "availability": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "category": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "donation": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "fee": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "highPrice": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "inventory": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "name": {
+                        "description": "Name of the event in plain text",
+                        "type": "string"
+                    },
+                    "price": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "priceCurrency": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "priceUnknown": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "inventory": {
+                "type": "object"
+            },
+            "Timeframe": {
+                "type": "object",
+                "properties": {
+                    "closes": {
+                        "description": "Close time for all days mentioned in the dayOfWeek. If close time is less than open, then it is following day.",
+                        "type": "string"
+                    },
+                    "dayOfWeek": {
+                        "description": "ISO day of the week. 1- Monday, 7- Sunday",
+                        "type": "array"
+                    },
+                    "open247": {
+                        "description": "Open around the clock",
+                        "type": "boolean"
+                    },
+                    "opens": {
+                        "description": "Open time for all days mentioned in the dayOfWeek",
+                        "type": "string"
+                    }
+                }
+            },
+            "dayOfWeek": {
+                "type": "array"
+            },
+            "VirtualLocation": {
+                "type": "object",
+                "properties": {
+                    "domain": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "platform": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "bbox": {
+                "type": "array"
+            },
+            "polygon": {
+                "type": "array"
+            }
+        }
+    }
+}
