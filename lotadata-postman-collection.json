@@ -1,0 +1,417 @@
+{
+    "id": "66e83dfce342cba6709ed12a547450d6",
+    "name": "LotaData",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "4252acc29361e4b317aed58e47a6151d",
+            "name": "Find event occurrences in the area. Returns results at specific place and time, event groups are expanded for every occurrence.",
+            "url": "http:\/\/api2.lotadata.com\/v2\/events",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "category",
+                    "description": "List of required EventCategory ids (Tier 1)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "activity",
+                    "description": "List of required activity type ids (compliment to category)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ambience",
+                    "description": "List of required ambience ids",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "genre",
+                    "description": "List of required genre ids",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "name",
+                    "description": "Matching on event and place names",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "q",
+                    "description": "Text query matching titles, description, various text, tags, category",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "from_day",
+                    "description": "Start on or after date specified (2015-10-16)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "to_day",
+                    "description": "Start on or before date specified (2015-10-16)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "capacity_min",
+                    "description": "Min capacity at location",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "capacity_max",
+                    "description": "Min capacity at location",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "center",
+                    "description": "latitude,longitude of the origin point",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "radius",
+                    "description": "Distance from origin in meters",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "bbox",
+                    "description": "Corner of a bounding box (lat,lng). Requires 0 or 2 pairs",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "polygon",
+                    "description": "Closed custom polygon. Ordered list of lat,lng pairs",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "within",
+                    "description": "Search within specified geopolitical place id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Return results starting at specified offset",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "Max results to return",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fieldset",
+                    "description": "Return results starting at specified offset (summary, context, detail)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "66e83dfce342cba6709ed12a547450d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "d63b9ba6fb090287c96c8200432da333",
+            "name": "Get Specific event details.",
+            "url": "http:\/\/api2.lotadata.com\/v2\/events\/{id}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "event @id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fieldset",
+                    "description": "Return results starting at specified offset (summary, context, detail)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "66e83dfce342cba6709ed12a547450d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "824fd0cf62be8cc9b19e5c6f464af506",
+            "name": "Venues, landmarks, regions, these are all places to search.",
+            "url": "http:\/\/api2.lotadata.com\/v2\/places",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "category",
+                    "description": "List of required EventCategory ids (Tier 1)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "function",
+                    "description": "List of required PlaceFunction ids (Tier 2)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ambience",
+                    "description": "List of required ambience ids",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tag",
+                    "description": "List of required tags",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "type",
+                    "description": "Specific PlaceType to return",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "name",
+                    "description": "Matching on event and place names",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "exact",
+                    "description": "Require an exact name match",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "capacity_min",
+                    "description": "Min capacity at location",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "capacity_max",
+                    "description": "Min capacity at location",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "street",
+                    "description": "Address of the place or street component of the address",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "locality",
+                    "description": "city, town, or neighborhood of the place",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "region",
+                    "description": "region or state",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "postal_code",
+                    "description": "Postal or zip code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "country",
+                    "description": "country component of the address",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "center",
+                    "description": "latitude,longitude of the origin point",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "radius",
+                    "description": "Distance from origin in meters",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "bbox",
+                    "description": "Corner of a bounding box (lat,lng). Requires 0 or 2 pairs",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "polygon",
+                    "description": "Closed custom polygon. Ordered list of lat,lng pairs",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "within",
+                    "description": "Search within specified geopolitical place id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Return results starting at specified offset",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "Max results to return",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fieldset",
+                    "description": "Return results starting at specified offset (summary, context, detail)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "66e83dfce342cba6709ed12a547450d6",
+            "rawModeData": ""
+        },
+        {
+            "id": "7e77f6646b9f169b5fc149d37bb714c2",
+            "name": "Get specific place details",
+            "url": "http:\/\/api2.lotadata.com\/v2\/places\/{id}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "event @id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fieldset",
+                    "description": "Return results starting at specified offset (summary, context, detail)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "66e83dfce342cba6709ed12a547450d6",
+            "rawModeData": ""
+        }
+    ]
+}
