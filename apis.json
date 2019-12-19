@@ -1,0 +1,117 @@
+{
+    "name": "Lota Data",
+    "description": "",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/lotadata-logo.png",
+    "tags": [
+        "analysis",
+        "api provider",
+        "data",
+        "general data",
+        "have api",
+        "have swagger",
+        "new",
+        "relative data",
+        "service api"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/lota-data\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "Lota Data",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/lotadata-logo.png",
+            "humanURL": "http:\/\/lotadata.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/lota-data-openapi.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/lota-data.json"
+                }
+            ]
+        },
+        {
+            "name": "LotaData",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/lotadata-logo.png",
+            "humanURL": "http:\/\/lotadata.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/lotadata-openapi.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/lotadata.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Blog",
+            "url": "https:\/\/www.lotadata.com\/blog\/"
+        },
+        {
+            "type": "Developers",
+            "url": "https:\/\/docs.lotadata.com\/"
+        },
+        {
+            "type": "Documentation",
+            "url": "https:\/\/docs.lotadata.com\/apis.html"
+        },
+        {
+            "type": "Documentation",
+            "url": "https:\/\/docs.lotadata.com\/"
+        },
+        {
+            "type": "Monetization",
+            "url": "https:\/\/docs.lotadata.com\/monetization.html"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28450-2019-09-04-14-41-48.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28450-2019-09-04-14-42-07.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28450-2019-09-03-23-58-38.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28450-2019-09-04-00-00-03.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28450-2019-09-04-00-00-10.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28450-2019-09-04-14-43-01.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28450-2019-09-04-00-00-23.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28450-2019-09-04-14-45-14.json"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/lotadata.com"
+        }
+    ]
+}
