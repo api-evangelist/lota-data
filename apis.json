@@ -13,8 +13,8 @@
         "relative data",
         "service api"
     ],
-    "created": "2019-12-19",
-    "modified": "2019-12-19",
+    "created": "2019-12-21",
+    "modified": "2019-12-21",
     "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/lota-data\/master\/apis.json",
     "specificationVersion": "0.14",
     "apis": [
@@ -28,7 +28,7 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/lota-data-openapi.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/lota-data\/master\/lota-data-openapi.json"
                 },
                 {
                     "type": "x-openapi",
@@ -46,7 +46,7 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/lotadata-openapi.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/lota-data\/master\/lotadata-openapi.json"
                 },
                 {
                     "type": "x-openapi",
@@ -57,6 +57,10 @@
     ],
     "include": [],
     "x-common": [
+        {
+            "type": "APIs.json",
+            "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/apis.json"
+        },
         {
             "type": "Blog",
             "url": "https:\/\/www.lotadata.com\/blog\/"
