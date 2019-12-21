@@ -1,5 +1,5 @@
 {
-    "id": "66e83dfce342cba6709ed12a547450d6",
+    "id": "802ec871ed10f0262d7e6f363ee568f9",
     "name": "LotaData",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "4252acc29361e4b317aed58e47a6151d",
+            "id": "f0caf4ef5f8ae27a442da13a784fba3f",
             "name": "Find event occurrences in the area. Returns results at specific place and time, event groups are expanded for every occurrence.",
             "url": "http:\/\/api2.lotadata.com\/v2\/events",
             "description": "",
@@ -156,11 +156,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "66e83dfce342cba6709ed12a547450d6",
+            "collectionId": "802ec871ed10f0262d7e6f363ee568f9",
             "rawModeData": ""
         },
         {
-            "id": "d63b9ba6fb090287c96c8200432da333",
+            "id": "53127cac0a402992331fc43dadd2efa7",
             "name": "Get Specific event details.",
             "url": "http:\/\/api2.lotadata.com\/v2\/events\/{id}",
             "description": "",
@@ -194,11 +194,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "66e83dfce342cba6709ed12a547450d6",
+            "collectionId": "802ec871ed10f0262d7e6f363ee568f9",
             "rawModeData": ""
         },
         {
-            "id": "824fd0cf62be8cc9b19e5c6f464af506",
+            "id": "2284ac15a4495247e5e386d3f9b88cb0",
             "name": "Venues, landmarks, regions, these are all places to search.",
             "url": "http:\/\/api2.lotadata.com\/v2\/places",
             "description": "",
@@ -372,11 +372,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "66e83dfce342cba6709ed12a547450d6",
+            "collectionId": "802ec871ed10f0262d7e6f363ee568f9",
             "rawModeData": ""
         },
         {
-            "id": "7e77f6646b9f169b5fc149d37bb714c2",
+            "id": "71795e7f42228cbe602a0b0bf430da1c",
             "name": "Get specific place details",
             "url": "http:\/\/api2.lotadata.com\/v2\/places\/{id}",
             "description": "",
@@ -410,7 +410,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "66e83dfce342cba6709ed12a547450d6",
+            "collectionId": "802ec871ed10f0262d7e6f363ee568f9",
             "rawModeData": ""
         }
     ]
